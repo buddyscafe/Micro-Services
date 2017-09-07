@@ -1,0 +1,38 @@
+Micro Service:
+
+The microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. 
+
+These services are built around business capabilities and independently deployable by fully automated deployment machinery. There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies.
+
+To start explaining the microservice style it's useful to compare it to the monolithic style: a monolithic application built as a single unit. 
+        Enterprise Applications are often built in three main parts: a client-side user interface (consisting of HTML pages and javascript running in a browser on the user's machine) a database (consisting of many tables inserted into a common, and usually relational, database management system), and a server-side application. The server-side application will handle HTTP requests, execute domain logic, retrieve and update data from the database, and select and populate HTML views to be sent to the browser. This server-side application is a monolith - a single logical executable[2]. Any changes to the system involve building and deploying a new version of the server-side application.
+        
+Limitations of Monolithic Applications:
+
+1) A change made to a small part of the application, requires the entire monolith to be rebuilt and deployed.
+2) Over time it's often hard to keep a good modular structure, making it harder to keep changes that ought to only affect one module within that module.
+3) Scaling requires scaling of the entire application rather than parts of it that require greater resource.
+
+Characteristics of a Microservice Architecture:- There is no formal definition of the microservices architectural style, but the common characteristics for architecture are as follows:
+1) Componentization via Services : a component is a unit of software that is independently replaceable and upgradeable.
+2) services are out-of-process components who communicate with a mechanism such as a web service request, or remote procedure call.
+2) One main reason for using services as components (rather than libraries) is that services are independently deployable. 
+3) some changes will change service interfaces resulting in some coordination, but the aim of a good microservice architecture is to minimize these through cohesive service boundaries and evolution mechanisms in the service contracts.
+
+Note: A service may consist of multiple processes that will always be developed and deployed together, such as an application process and a database that's only used by that service.
+
+adv of MS:
+a more explicit component interface.
+
+disadvantages of MS:
+1) Remote calls are more expensive than in process calls.
+2) Movements of behaviour across the components are harder to do when crossing the process boundaries.
+
+
+
+
+
+References:-
+
+https://martinfowler.com/articles/microservices.html#CharacteristicsOfAMicroserviceArchitecture
+
